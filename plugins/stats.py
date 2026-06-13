@@ -3,15 +3,32 @@
 # Owner @Mr_Mohammed_29
 # ------------------------- #
 
-from pyrogram import Client, filters
+import time
+import os
+
+from pyrogram import (
+    Client,
+    filters
+)
+
+from pyrogram.types import (
+    InlineKeyboardMarkup,
+    InlineKeyboardButton
+)
 
 from config import OWNER_ID
 from database import count_users
+
 
 # ------------------------- #
 # Don't Remove Credit 
 # Owner @Mr_Mohammed_29
 # ------------------------- #
+
+START_TIME = time.time()
+
+TOTAL_POSTS = 0
+
 
 def owner(_, __, msg):
 
@@ -23,9 +40,44 @@ def owner(_, __, msg):
 
 owner_filter = filters.create(owner)
 
+
+
+def uptime():
+
+    sec = int(time.time() - START_TIME)
+
+    days, sec = divmod(sec, 86400)
+    hours, sec = divmod(sec, 3600)
+    minutes, sec = divmod(sec, 60)
+
+    return (
+        f"{days}d {hours}h {minutes}m {sec}s"
+    )
+
+
+
+async def stats_text():
+
+    users = await count_users()
+
+    return f"""
+📊 <b>Bot Statistics</b>
+
+👤 Users : <code>{users}</code>
+
+📤 Posts : <code>{TOTAL_POSTS}</code>
+
+🏓 Ping : <code>Online</code>
+
+⚙️ Version : <code>v3 Stable</code>
+
+⏳ Uptime :
+<code>{uptime()}</code>
+"""
+
+
 # ------------------------- #
-# Don't Remove Credit 
-# Owner @Mr_Mohammed_29
+# STATS COMMAND
 # ------------------------- #
 
 @Client.on_message(
@@ -37,16 +89,58 @@ async def stats(
     message
 ):
 
-    users = await count_users()
+    buttons = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    "🔄 Refresh Stats",
+                    callback_data="refresh_stats"
+                )
+            ]
+        ]
+    )
 
 
     await message.reply_text(
-        f"""
-📊 Bot Stats
-
-👤 Users: {users}
-"""
+        await stats_text(),
+        reply_markup=buttons
     )
+
+
+
+# ------------------------- #
+# REFRESH BUTTON
+# ------------------------- #
+
+@Client.on_callback_query(
+    filters.regex("refresh_stats")
+)
+async def refresh_stats(
+    client,
+    query
+):
+
+    if query.from_user.id != OWNER_ID:
+        return
+
+
+    buttons = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    "🔄 Refresh Stats",
+                    callback_data="refresh_stats"
+                )
+            ]
+        ]
+    )
+
+
+    await query.message.edit_text(
+        await stats_text(),
+        reply_markup=buttons
+    )
+
 
 # ------------------------- #
 # Don't Remove Credit 

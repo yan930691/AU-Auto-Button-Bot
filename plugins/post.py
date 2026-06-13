@@ -3,7 +3,6 @@
 # Owner @Mr_Mohammed_29
 # ------------------------- #
 
-import plugins.thumbnail as thumb
 import plugins.stats as stats
 
 from pyrogram import Client, filters
@@ -53,8 +52,7 @@ keyboard = InlineKeyboardMarkup(
             "broadcast",
             "addadmin",
             "removeadmin",
-            "admins",
-            "thumbnail"
+            "admins"
         ]
     )
 )
@@ -91,7 +89,6 @@ async def post(_, message):
                 CHANNEL_ID,
                 video=message.video.file_id,
                 caption=message.caption or "",
-                thumb=thumb.THUMBNAIL if thumb.THUMBNAIL else None,
                 reply_markup=keyboard
             )
 
@@ -102,7 +99,6 @@ async def post(_, message):
                 CHANNEL_ID,
                 document=message.document.file_id,
                 caption=message.caption or "",
-                thumb=thumb.THUMBNAIL if thumb.THUMBNAIL else None,
                 reply_markup=keyboard
             )
 
@@ -111,7 +107,7 @@ async def post(_, message):
 
         await message.reply_text("✅ Posted")
 
-        # LOG FIX (important safe call)
+        # LOGS
         await send_log(_, f"📨 Nᴇᴡ Pᴏsᴛ\nUsᴇʀ: {message.from_user.id}")
 
     except Exception as e:

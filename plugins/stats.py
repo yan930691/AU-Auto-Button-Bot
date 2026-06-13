@@ -80,10 +80,7 @@ async def stats_text():
 # STATS COMMAND
 # ------------------------- #
 
-@Client.on_message(
-    filters.command("stats")
-    & owner_filter
-)
+filters.command("stats") & admin_filter
 async def stats(
     client,
     message

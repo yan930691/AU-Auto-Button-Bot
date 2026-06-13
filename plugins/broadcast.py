@@ -40,7 +40,7 @@ async def broadcast(
     if not message.reply_to_message:
 
         return await message.reply_text(
-            "Reply to a message"
+            "Rᴇᴘʟʏ Tᴏ A Mᴇssᴀɢᴇ Tᴏ Sᴇɴᴅ Bʀᴏᴀᴅᴄᴀsᴛ"
         )
 
 
@@ -67,10 +67,10 @@ async def broadcast(
 
     await message.reply_text(
         f"""
-✅ Broadcast Done
+✅️ Bʀᴏᴀᴅᴄᴀsᴛ Cᴏᴍᴘʟᴇᴛᴇᴅ
 
-Sent: {sent}
-Failed: {failed}
+Sᴇɴᴛ : {sent}
+Fᴀɪʟᴇᴅ : {failed}
 """
     )
 

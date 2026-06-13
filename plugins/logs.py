@@ -1,12 +1,10 @@
-# ------------------------- #
-# Don't Remove Credit
-# Owner @Mr_Mohammed_29
-# ------------------------- #
-
 from config import LOG_CHANNEL
 
 
 async def send_log(client, text):
+
+    if not LOG_CHANNEL:
+        return
 
     try:
 
@@ -17,7 +15,7 @@ async def send_log(client, text):
 
 {text}
 """,
-            parse_mode="html"
+            parse_mode="HTML"
         )
 
     except Exception as e:
@@ -25,8 +23,3 @@ async def send_log(client, text):
         print(
             f"LOG ERROR: {e}"
         )
-
-# ------------------------- #
-# Don't Remove Credit 
-# Owner @Mr_Mohammed_29
-# ------------------------- #

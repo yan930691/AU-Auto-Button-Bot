@@ -47,10 +47,10 @@
 | API_ID | Telegram API ID |
 | API_HASH | Telegram API Hash |
 | OWNER_ID | Owner Telegram ID |
-| CHANNEL_ID | Target Channel ID |
 | LOG_CHANNEL | Log Channel ID |
 | MONGO_URI | Database URL |
 
+ 'Add More To Add in config.py'
 </details>
 
 ---

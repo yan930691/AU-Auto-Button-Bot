@@ -23,7 +23,6 @@ OWNER_ID = 7284759394
 
 CHANNEL_ID = -1004055876401
 
-
 MONGO_URI = os.getenv("MONGO_URI")
 
 # ------------------------- #
@@ -35,7 +34,6 @@ LOG_CHANNEL = int(
     os.getenv("LOG_CHANNEL", "0")
 )
 
-
 BOT_USERNAME = "AU_AutoButtonAdder_bot"
 
 
@@ -46,24 +44,35 @@ BUTTONS = [
     ]
 ]
 
+
 # ------------------------- #
 # Don't Remove Credit 
 # Owner @Mr_Mohammed_29
 # ------------------------- #
 
 START_TEXT = """
-👋 Welcome
+<b>⍟───[ 🤖 ᴀᴜ ᴀᴜᴛᴏ ʙᴜᴛᴛᴏɴ ʙᴏᴛ ]───⍟</b>
 
-Send me any:
-• Text
-• Photo
-• Video
-• Document
+<b>👋 Hᴇʟʟᴏ</b> <b>{mention}</b>
 
-I will post it to the channel with buttons.
+<b>🚀 I ᴀᴍ ᴀu ᴀᴜᴛᴏ ʙᴜᴛᴛᴏɴ ᴀᴅᴅᴇʀ ʙᴏᴛ</b>
 
-🚀 AU Auto Button Bot
+<b>⚡ Sᴇɴᴅ ᴍᴇ:</b>
+
+<b>• 📄 Tᴇxᴛ
+• 🖼 Pʜᴏᴛᴏ
+• 🎬 Vɪᴅᴇᴏ
+• 📁 Dᴏᴄᴜᴍᴇɴᴛ</b>
+
+<b>🔥 I ᴡɪʟʟ ᴘᴏsᴛ ɪᴛ ᴛᴏ ᴄʜᴀɴɴᴇʟ
+ᴡɪᴛʜ ᴀᴜᴛᴏ ʙᴜᴛᴛᴏɴs</b>
+
+<b>⚙️ Pᴏᴡᴇʀᴇᴅ ʙʏ:
+@Anime_UpdatesAU</b>
+
+<b>⍟──────────────⍟</b>
 """
+
 
 # ------------------------- #
 # Don't Remove Credit 
@@ -71,16 +80,31 @@ I will post it to the channel with buttons.
 # ------------------------- #
 
 ABOUT_TEXT = """
-🤖 Bot: AU Auto Button Bot
+<b>ℹ️ AU Auto Button Bot</b>
 
-Features:
-• Auto posting
-• Button support
-• Admin system
-• Broadcast
-• Statistics
-• Logging
+🤖 Nᴀᴍᴇ : 
+<a href="https://t.me/AU_AutoButtonAdder_bot">AU Auto Button Bot</a>
+
+📚 Lɪʙʀᴀʀʏ : Pʏʀᴏɢʀᴀᴍ 2.0
+
+💻 Lᴀɴɢᴜᴀɢᴇ : Pʏᴛʜᴏɴ 𝟹
+
+⚙️ Sᴇʀᴠᴇʀ : 
+<a href="https://render.com/">Rᴇɴᴅᴇʀ</a>
+
+🚀 Bᴜɪʟᴅ Sᴛᴀᴛᴜs : 
+<a href="https://t.me/Mr_Mohammed_29">Sᴛᴀʙʟᴇ ✅</a>
+
+👨‍💻 Pʀᴏɢʀᴀᴍᴍᴇʀ :
+<a href="https://t.me/Mr_Mohammed_29">Mᴏʜᴀᴍᴍᴇᴅ</a>
+
+📢 Uᴘᴅᴀᴛᴇs :
+<a href="https://t.me/Anime_UpdatesAU">Cʟɪᴄᴋ Hᴇʀᴇ</a>
+
+🌐 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ :
+<a href="https://github.com/MD-Developer-yt/AU_Auto-Button-Bot">Gɪᴛʜᴜʙ</a>
 """
+
 
 # ------------------------- #
 # Don't Remove Credit 
@@ -88,9 +112,10 @@ Features:
 # ------------------------- #
 
 OWNER_TEXT = """
-👤 Owner: (@Mr_Mohammed_29)
-7284759394
+👤 Owner:
+<a href="https://t.me/Mr_Mohammed_29">ᴍᴏʜᴀᴍᴍᴇᴅ</a>
 """
+
 # ------------------------- #
 # Don't Remove Credit 
 # Owner @Mr_Mohammed_29

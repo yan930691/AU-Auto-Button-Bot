@@ -31,7 +31,7 @@ MONGO_URI = os.getenv("MONGO_URI")
 # ------------------------- #
 
 LOG_CHANNEL = int(
-    os.getenv("LOG_CHANNEL", "0")
+    os.getenv("LOG_CHANNEL", "-1003799133048")
 )
 
 BOT_USERNAME = "AU_AutoButtonAdder_bot"

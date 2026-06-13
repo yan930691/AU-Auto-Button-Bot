@@ -67,8 +67,7 @@ START_TEXT = """
 <b>🔥 I ᴡɪʟʟ ᴘᴏsᴛ ɪᴛ ᴛᴏ ᴄʜᴀɴɴᴇʟ
 ᴡɪᴛʜ ᴀᴜᴛᴏ ʙᴜᴛᴛᴏɴs</b>
 
-<b>⚙️ Pᴏᴡᴇʀᴇᴅ ʙʏ:
-@Anime_UpdatesAU</b>
+<b>⚙️ Pᴏᴡᴇʀᴇᴅ ʙʏ: @Anime_UpdatesAU</b>
 
 <b>⍟──────────────⍟</b>
 """
@@ -80,7 +79,7 @@ START_TEXT = """
 # ------------------------- #
 
 ABOUT_TEXT = """
-<b>ℹ️ AU Auto Button Bot</b>
+<b> AU Auto Button Bot</b>
 
 <b>
 🤖 Nᴀᴍᴇ : <a href="https://t.me/AU_AutoButtonAdder_bot">AU Auto Button Bot</a>

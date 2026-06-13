@@ -1,7 +1,10 @@
 # ------------------------- #
-# Don't Remove Credit 
+# Don't Remove Credit
 # Owner @Mr_Mohammed_29
 # ------------------------- #
+
+import asyncio
+
 from pyrogram import Client, filters
 from pyrogram.types import (
     InlineKeyboardMarkup,
@@ -16,8 +19,7 @@ from pyrogram.types import (
 from database import add_user
 from config import (
     START_TEXT,
-    ABOUT_TEXT,
-    OWNER_TEXT
+    ABOUT_TEXT
 )
 
 # ------------------------- #
@@ -25,31 +27,22 @@ from config import (
 # Owner @Mr_Mohammed_29
 # ------------------------- #
 
-@Client.on_message(
-    filters.command("start")
-    & filters.private
-)
+START_IMAGE = "https://graph.org/file/8cc7c4d5f0989b8efad96-f5d88bacd8e8049c9b.jpg"
 
 # ------------------------- #
 # Don't Remove Credit 
 # Owner @Mr_Mohammed_29
 # ------------------------- #
 
-async def start(_, message):
+def buttons():
 
-    await add_user(
-        message.from_user.id
-    )
-
-    buttons = InlineKeyboardMarkup(
+    return InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
                     "📢 Updates",
                     url="https://t.me/Anime_UpdatesAU"
-                )
-            ],
-            [
+                ),
                 InlineKeyboardButton(
                     "👤 Owner",
                     url="https://t.me/Mr_Mohammed_29"
@@ -64,9 +57,60 @@ async def start(_, message):
         ]
     )
 
-    await message.reply_text(
-        START_TEXT,
-        reply_markup=buttons
+# ------------------------- #
+# Don't Remove Credit 
+# Owner @Mr_Mohammed_29
+# ------------------------- #
+
+@Client.on_message(
+    filters.command("start")
+    & filters.private
+)
+async def start(client, message):
+
+    await add_user(
+        message.from_user.id
+    )
+
+
+    async def run_animation():
+
+        m = await message.reply_text(
+            "ᴍᴏɴᴋᴇʏ ᴅ ʟᴜғғʏ\nɢᴇᴀʀ 𝟻..."
+        )
+
+
+        await asyncio.sleep(0.5)
+        await m.edit_text("🎊")
+
+
+        await asyncio.sleep(0.5)
+        await m.edit_text("🚀")
+
+
+        await asyncio.sleep(0.5)
+        await m.edit_text(
+            "sᴜɴ ɢᴏᴅ ɴɪᴋᴀ!..."
+        )
+
+
+        await asyncio.sleep(0.5)
+        await m.delete()
+
+
+        await message.reply_sticker(
+            "CAACAgQAAxkBAAPZafuA9gQjLstGU0j8kmlDj2-P2A0AAqoaAALVH9BRmAWPD58ZL6keBA"
+        )
+
+
+    await run_animation()
+
+
+    await client.send_photo(
+        message.chat.id,
+        photo=START_IMAGE,
+        caption=START_TEXT,
+        reply_markup=buttons()
     )
 
 # ------------------------- #
@@ -74,16 +118,60 @@ async def start(_, message):
 # Owner @Mr_Mohammed_29
 # ------------------------- #
 
+# ------------------------- #
+# ABOUT
+# ------------------------- #
+
 @Client.on_callback_query(
     filters.regex("about")
 )
-async def about(_, query):
+async def about(client, query):
 
-    await query.message.edit_text(
-        ABOUT_TEXT
+
+    about_buttons = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    "🏠 Home",
+                    callback_data="home"
+                )
+            ]
+        ]
     )
 
+
+    await query.message.delete()
+
+
+    await client.send_photo(
+        query.message.chat.id,
+        photo=START_IMAGE,
+        caption=ABOUT_TEXT,
+        reply_markup=about_buttons
+    )
+
+
 # ------------------------- #
-# Don't Remove Credit 
+# HOME
+# ------------------------- #
+
+@Client.on_callback_query(
+    filters.regex("home")
+)
+async def home(client, query):
+
+    await query.message.delete()
+
+
+    await client.send_photo(
+        query.message.chat.id,
+        photo=START_IMAGE,
+        caption=START_TEXT,
+        reply_markup=buttons()
+    )
+
+
+# ------------------------- #
+# Don't Remove Credit
 # Owner @Mr_Mohammed_29
 # ------------------------- #

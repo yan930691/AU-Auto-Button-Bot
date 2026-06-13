@@ -67,3 +67,56 @@ addadmin     - Add admin (Owner only)
 removeadmin  - Remove admin (Owner only)
 admins       - List admins (Owner only)
 ````
+
+# 🚀 Deployment Guide
+
+---
+
+## 🚀 Deploy on Render
+
+[![Deploy on Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/)
+
+### Steps
+- Fork this repository
+- Click the Render button
+- Connect your GitHub repo
+- Add Environment Variables
+- Deploy
+
+### Environment Variables
+BOT_TOKEN  
+API_ID  
+API_HASH  
+OWNER_ID  
+LOG_CHANNEL 
+MONGO_URI
+
+---
+
+## ☁️ Deploy on Koyeb
+
+[![Deploy on Koyeb](https://img.shields.io/badge/Deploy-Koyeb-blue?style=for-the-badge&logo=koyeb)](https://app.koyeb.com/)
+
+### Steps
+- Fork this repository
+- Open Koyeb dashboard
+- Create new App
+- Connect GitHub repo
+- Set Build & Run commands
+- Add Environment Variables
+- Deploy
+
+### Build Command
+pip install -r requirements.txt
+
+### Run Command
+python bot.py
+
+### Environment Variables
+BOT_TOKEN  
+API_ID  
+API_HASH  
+OWNER_ID
+LOG_CHANNEL 
+MONGO_URI
+CHANNEL_ID

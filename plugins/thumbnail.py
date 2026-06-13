@@ -6,12 +6,9 @@
 from pyrogram import Client, filters
 from config import OWNER_ID
 
-import plugins.thumbnail as thumb
 
+THUMBNAIL = None
 
-# ------------------------- #
-# THUMBNAIL COMMAND
-# ------------------------- #
 
 @Client.on_message(
     filters.command("thumbnail")
@@ -19,18 +16,20 @@ import plugins.thumbnail as thumb
 )
 async def set_thumbnail(client, message):
 
+    global THUMBNAIL
+
     if message.from_user.id != OWNER_ID:
         return
 
 
     if not message.reply_to_message or not message.reply_to_message.photo:
         return await message.reply_text(
-            "Reply to an image with /thumbnail"
+            "Reply to an image to set thumbnail."
         )
 
 
-    thumb.THUMBNAIL = await message.reply_to_message.download(
-        file_name="thumbnail.jpg"
+    THUMBNAIL = await message.reply_to_message.download(
+        file_name="thumb.jpg"
     )
 
 
@@ -38,8 +37,4 @@ async def set_thumbnail(client, message):
         "✅ Thumbnail saved"
     )
 
-
-# ------------------------- #
-# Don't Remove Credit 
-# Owner @Mr_Mohammed_29
 # ------------------------- #

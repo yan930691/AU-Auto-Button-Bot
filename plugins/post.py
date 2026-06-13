@@ -3,8 +3,6 @@
 # Owner @Mr_Mohammed_29
 # ------------------------- #
 
-import os
-
 from pyrogram import (
     Client,
     filters
@@ -55,7 +53,6 @@ keyboard = InlineKeyboardMarkup(
 )
 
 
-
 # ------------------------- #
 # THUMBNAIL COMMAND
 # ------------------------- #
@@ -90,7 +87,6 @@ async def thumbnail(_, message):
     )
 
 
-
 # ------------------------- #
 # POST SYSTEM
 # ------------------------- #
@@ -111,7 +107,6 @@ async def thumbnail(_, message):
 )
 
 async def post(_, message):
-
 
     if not await allowed(
         message.from_user.id
@@ -146,22 +141,34 @@ async def post(_, message):
 
         elif message.video:
 
+            thumb = None
+
+            if THUMBNAIL:
+                thumb = THUMBNAIL
+
+
             await _.send_video(
                 CHANNEL_ID,
                 message.video.file_id,
                 caption=message.caption or "",
-                thumb=THUMBNAIL,
+                thumb=thumb,
                 reply_markup=keyboard
             )
 
 
         elif message.document:
 
+            thumb = None
+
+            if THUMBNAIL:
+                thumb = THUMBNAIL
+
+
             await _.send_document(
                 CHANNEL_ID,
                 message.document.file_id,
                 caption=message.caption or "",
-                thumb=THUMBNAIL,
+                thumb=thumb,
                 reply_markup=keyboard
             )
 

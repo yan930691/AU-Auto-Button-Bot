@@ -49,13 +49,13 @@ async def add_admin_cmd(client, message):
     try:
         await client.send_message(
             uid,
-            "🎊 Cᴏɴɢʀᴀᴛs, Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴘʀᴏᴍᴏᴛᴇᴅ ᴛᴏ Aᴅᴍɪɴ!\ɴ\ɴYᴏᴜ ᴄᴀɴ ɴᴏᴡ ᴜsᴇ ᴀᴅᴍɪɴ ғᴇᴀᴛᴜʀᴇs ᴏғ ᴛʜᴇ ʙᴏᴛ."
+            "🎊 Cᴏɴɢʀᴀᴛs, Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴘʀᴏᴍᴏᴛᴇᴅ ᴛᴏ Aᴅᴍɪɴ!\n\nYᴏᴜ ᴄᴀɴ ɴᴏᴡ ᴜsᴇ ᴀᴅᴍɪɴ ғᴇᴀᴛᴜʀᴇs ᴏғ ᴛʜᴇ ʙᴏᴛ."
         )
     except:
         pass
 
     await message.reply_text(
-        f"✅ Admin Added\n{uid}"
+        f"✅ Aᴅᴍɪɴ Aᴅᴅᴇᴅ\n{uid}"
     )
 
 # ------------------------- #
@@ -69,7 +69,7 @@ async def remove_admin_cmd(client, message):
 
     if len(message.command) < 2:
         return await message.reply_text(
-            "Usage:\n/removeadmin USER_ID"
+            "Usᴀɢᴇ :\n/removeadmin USER_ID"
         )
 
     uid = int(message.command[1])
@@ -80,13 +80,13 @@ async def remove_admin_cmd(client, message):
     try:
         await client.send_message(
             uid,
-            "⚠️ You have been removed from Admin role."
+            "😞 Sᴏʀʀʏ Fᴏʀ Tᴏ Sᴀʏ , Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ʀᴇᴍᴏᴠᴇᴅ ғʀᴏᴍ Aᴅᴍɪɴ ʀᴏʟᴇ."
         )
     except:
         pass
 
     await message.reply_text(
-        f"✅ Admin Removed\n{uid}"
+        f"✅ Aᴅᴍɪɴ Rᴇᴍᴏᴠᴇᴅ\n{uid}"
     )
 
 # ------------------------- #
@@ -101,9 +101,9 @@ async def admins_cmd(client, message):
     admins = await get_admins()
 
     if not admins:
-        return await message.reply_text("No admins")
+        return await message.reply_text("‼️ Yᴏᴜ Hᴀᴠᴇ Nᴏᴛ Aᴅᴅᴇᴅ Aᴅᴍɪɴs, Sᴏ Nᴏ Aᴅᴍɪɴs Fᴏᴜɴᴅ")
 
-    text = "👮 Admins List\n\n"
+    text = "👮 Aᴅᴍɪɴ Lɪsᴛ\n\n"
 
     for uid in admins:
 

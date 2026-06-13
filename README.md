@@ -59,18 +59,14 @@
 
 ## 📌 Commands
 
-<pre id="commandsBox">
+````txt
 start        - Start Bot
 stats        - Show bot statistics (Owner & Admin)
 broadcast    - Send message to users (Owner & Admin)
 addadmin     - Add admin (Owner only)
 removeadmin  - Remove admin (Owner only)
 admins       - List admins (Owner only)
-</pre>
-
-<button onclick="navigator.clipboard.writeText(document.getElementById('commandsBox').innerText)">
-📋 Copy Commands
-</button>
+````
 
 
 # 🚀 Deployment Guide
@@ -93,7 +89,7 @@ BOT_TOKEN
 API_ID  
 API_HASH  
 OWNER_ID  
-LOG_CHANNEL 
+LOG_CHANNEL  
 MONGO_URI
 
 ---
@@ -121,6 +117,6 @@ python bot.py
 BOT_TOKEN  
 API_ID  
 API_HASH  
-OWNER_ID
-LOG_CHANNEL 
+OWNER_ID  
+LOG_CHANNEL  
 MONGO_URI

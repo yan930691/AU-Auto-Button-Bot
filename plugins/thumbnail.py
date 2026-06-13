@@ -11,7 +11,7 @@ THUMBNAIL = None
 
 
 @Client.on_message(
-    filters.command("thumbnail") & filters.private
+    filters.command("thumbnail") & admin_filter
 )
 async def set_thumbnail(client, message):
 

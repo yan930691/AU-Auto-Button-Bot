@@ -66,7 +66,7 @@ broadcast    - Send message to users (Owner & Admin)
 addadmin     - Add admin (Owner only)
 removeadmin  - Remove admin (Owner only)
 admins       - List admins (Owner only)
-````
+
 
 # 🚀 Deployment Guide
 
@@ -119,4 +119,3 @@ API_HASH
 OWNER_ID
 LOG_CHANNEL 
 MONGO_URI
-CHANNEL_ID

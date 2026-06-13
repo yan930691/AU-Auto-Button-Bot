@@ -37,17 +37,17 @@ def buttons():
         [
             [
                 InlineKeyboardButton(
-                    "📢 Updates",
+                    "• Uᴘᴅᴀᴛᴇs •",
                     url="https://t.me/Anime_UpdatesAU"
                 ),
                 InlineKeyboardButton(
-                    "👤 Owner",
+                    "• Oᴡɴᴇʀ •",
                     url="https://t.me/Mr_Mohammed_29"
                 )
             ],
             [
                 InlineKeyboardButton(
-                    "ℹ️ About",
+                    "• Aʙᴏᴜᴛ •",
                     callback_data="about"
                 )
             ]
@@ -71,15 +71,15 @@ async def start(client, message):
 
 
     m = await message.reply_text(
-        "ᴍᴏɴᴋᴇʏ ᴅ ʟᴜғғʏ\nɢᴇᴀʀ 𝟻..."
+        "Dᴇᴍᴏɴ Kɪɴɢ..."
     )
 
 
     for text in [
-        "🎊",
-        "🚀",
-        "sᴜɴ ɢᴏᴅ ɴɪᴋᴀ!...",
-        "✅ Started!"
+        "⚡️",
+        "😈",
+        "Rɪᴍᴜʀᴜ...",
+        "Tᴇᴍᴘᴇsᴛ!"
     ]:
 
         await asyncio.sleep(0.5)
@@ -90,7 +90,7 @@ async def start(client, message):
 
 
     await message.reply_sticker(
-        "CAACAgQAAxkBAAPZafuA9gQjLstGU0j8kmlDj2-P2A0AAqoaAALVH9BRmAWPD58ZL6keBA"
+        "CAACAgUAAxkBAAEXmw5plIsM5lyaJfj5NwNp13QSrbW9NQACnBsAAlztqVYRMk2x1suA_B4E"
     )
 
 
@@ -118,7 +118,7 @@ async def about(client, query):
         [
             [
                 InlineKeyboardButton(
-                    "🏠 Home",
+                    "• Hᴏᴍᴇ •",
                     callback_data="home"
                 )
             ]

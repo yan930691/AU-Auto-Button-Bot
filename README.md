@@ -92,6 +92,8 @@ OWNER_ID
 LOG_CHANNEL  
 MONGO_URI
 
+```Click On Environment Variables To Know More```
+
 ---
 
 ## ☁️ Deploy on Koyeb
@@ -121,6 +123,7 @@ OWNER_ID
 LOG_CHANNEL  
 MONGO_URI
 
+``` Click On Environment Variables Again To Know More ```
 ----
 
 ## 👨‍💻 Developer

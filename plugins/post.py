@@ -34,6 +34,11 @@ keyboard = InlineKeyboardMarkup(
     ]
 )
 
+# ------------------------- #
+# Don't Remove Credit 
+# Owner @Mr_Mohammed_29
+# ------------------------- #
+
 
 # ------------------------- #
 # POST SYSTEM
@@ -107,7 +112,7 @@ async def post(_, message):
         await message.reply_text("✅ Posted")
 
         # LOG FIX (important safe call)
-        await send_log(_, f"📌 New Post\nUser: {message.from_user.id}")
+        await send_log(_, f"📨 Nᴇᴡ Pᴏsᴛ\nUsᴇʀ: {message.from_user.id}")
 
     except Exception as e:
         await message.reply_text(str(e))

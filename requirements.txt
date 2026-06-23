@@ -1,15 +1,3 @@
-# ------------------------- #
-# Don't Remove Credit 
-# Owner @Mr_Mohammed_29
-# ------------------------- #
-
-pyrogram==2.0.106
-tgcrypto
-motor
-flask
-gunicorn
-
-# ------------------------- #
-# Don't Remove Credit 
-# Owner @Mr_Mohammed_29
-# ------------------------- #
+python-telegram-bot[job-queue,webhooks]==22.4
+flask==3.0.0
+gunicorn==21.2.0

@@ -8,6 +8,19 @@ services:
     name: au-auto-button-bot
     env: docker
     plan: free
+    
+    # 🔥 လိုအပ်တဲ့ Environment Variables တွေပဲ ထားတယ်
+    envVars:
+      - key: BOT_TOKEN
+        value: 8526763711:AAFhTxRHU_HBFZUawV5JnskkJ5IT5vIxOFU
+      - key: API_ID
+        value: your_api_id_here
+      - key: API_HASH
+        value: your_api_hash_here
+      - key: MONGO_URI
+        value: mongodb+srv://yan930691_db_user:1350198842312win@cluster0.redsjar.mongodb.net/?appName=Cluster0
+      - key: ADMIN_ID
+        value: 1147922719
 
 # ------------------------- #
 # Don't Remove Credit 

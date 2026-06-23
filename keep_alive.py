@@ -5,7 +5,6 @@
 
 from flask import Flask, request
 from threading import Thread
-import json
 
 # ------------------------- #
 # Don't Remove Credit 
@@ -24,9 +23,7 @@ def home():
 @app.route("/webhook", methods=["POST"])
 def webhook():
     try:
-        # Telegram က လာတဲ့ Update ကို လက်ခံတယ်
         data = request.get_json(force=True)
-        # Pyrogram အတွက် update ကို ကိုင်တွယ်ပါ
         print(f"Webhook received: {data}")
         return "ok", 200
     except Exception as e:

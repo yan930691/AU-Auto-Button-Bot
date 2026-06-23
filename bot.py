@@ -21,7 +21,8 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
 # ---------- Config ----------
-TOKEN = os.environ.get("TELEGRAM_TOKEN")
+# 🔥 BOT_TOKEN ရော TELEGRAM_TOKEN ရော နှစ်ခုလုံး အလုပ်လုပ်မယ်
+TOKEN = os.environ.get("TELEGRAM_TOKEN") or os.environ.get("BOT_TOKEN")
 if not TOKEN:
     logger.error("TELEGRAM_TOKEN not set")
     exit(1)
